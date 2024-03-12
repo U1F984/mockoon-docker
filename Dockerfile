@@ -14,5 +14,5 @@ RUN curl -L -o mockoon.deb https://github.com/mockoon/mockoon/releases/download/
 
 # Create the autostart directory and autostart file for Mockoon
 RUN mkdir -p /defaults && \
-    echo "/opt/Mockoon/mockoon" > /defaults/autostart && \
+    echo "/opt/Mockoon/mockoon --no-sandbox" > /defaults/autostart && \
     chmod +x /defaults/autostart
